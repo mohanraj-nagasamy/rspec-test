@@ -1,11 +1,12 @@
 # Rspec with guard without rails dependency
 
-> one liner
-> Rspec - 
-> guard - 
+> ## one liner about rspec and guard
+> Rspec - RSpec is testing tool for the Ruby programming language. Born under the banner of Behaviour-Driven Development, it is designed to make Test-Driven Development a productive and enjoyable experience. More at : http://rspec.info/
+
+> Guard - Guard is a command line tool to easily handle events on file system modifications. So you don't have to run the test every time you change the tests. Guard keeps you focus on the tests and text editor or IDE.
 
 
-## Simple way
+## The Simple way
 
 ### Step:1 - Clone the project 
 
@@ -21,8 +22,8 @@ $cd rspec-test
 $ls -l
 ```
 
-lib - is where your source goes.
-spec - is where your tests goes (RSpec files)
+> lib - is where your source goes. <br/>
+> spec - is where your tests goes (RSpec files)
 
 
 ### Step:3 - Install rspec
