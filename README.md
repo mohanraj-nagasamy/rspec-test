@@ -10,16 +10,17 @@
 ### Step:1 - Clone the project 
 
 
-'''git clone git://github.com/mohanraj-nagasamy/rspec-test.git'''
-
+```ruby
+git clone git://github.com/mohanraj-nagasamy/rspec-test.git
+```
 
 ### Step:2 - Run the following commands
 
-
-'''
+```ruby
 $cd rspec-test
 $ls -l
-'''
+```
+
 lib - is where your source goes.
 spec - is where your tests goes (RSpec files)
 
