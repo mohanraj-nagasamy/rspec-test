@@ -1,10 +1,10 @@
-# Rspec with guard without rails dependency
+# Rspec with guard without rails
 
 > ## one liner about rspec and guard
-> Rspec - RSpec is testing tool for the Ruby programming language. It is designed to make Test-Driven Development a productive and enjoyable experience. <br/>
+> **Rspec** - RSpec is testing tool for the Ruby programming language. It is designed to make Test-Driven Development a productive and enjoyable experience. <br/>
 > More @ http://rspec.info/
 
-> Guard - Guard is a command line tool to easily handle events on file system modifications. So you don't have to run the test every time you change the files. Guard keeps you focus on the tests and text editor or IDE. <br/>
+> **Guard** - Guard is a command line tool to easily handle events on file system modifications. So you don't have to run the test each and every time when you change the files. Guard keeps you focus on the tests and text editor or IDE. <br/>
 > More @ https://github.com/guard/guard/blob/master/README.md
 
 ## Table of Contents
@@ -68,9 +68,9 @@ Stay focus on the editor and keep writing tests.
 ### Step:7 - Have fun
 
 > Remember:<br/>
-> lib - is where your source goes. <br/>
-> spec - is where your tests goes (RSpec files).  <br/>
-> And the movie memento - TDD is kind of that exp. 
+> **lib** - is where your source goes. <br/>
+> **spec** - is where your tests goes (RSpec files).  <br/>
+> And the movie **memento** - TDD is kind of that exp. 
 
 
 ## The manual way
@@ -109,12 +109,12 @@ $gem install rspec
 ```
 
 ```ruby
-$rspec --init
+$rspec --init #It will create .rspec file and spec_helper.rb.
 ```
 
-It will create .rspec file and spec_helper.rb.
+Copy fine tuned from - https://github.com/mohanraj-nagasamy/rspec-test.git
 
-### Step:2 - Create test first
+### Step:3 - Create test first
 
 Let's say you want to test User spec. Create user_spec.rb inside spec dir 
 
@@ -135,7 +135,7 @@ describe User do
 end
 ```
 
-### Step:2 - Create something to fail/pass the test
+### Step:4 - Create something to fail/pass the test
 
 create user.rb inside lib dir
 
@@ -145,13 +145,13 @@ $subl lib/user.rb
 
 ```ruby
 #lib/user.rb 
-user.rb
+
 class User
 	attr_accessor :name
 end
 ```
 
-### Step:2 - Run tests with rspec
+### Step:5 - Run tests with rspec
 
 ```ruby
 $rspec spec/user_spec.rb -f d -c
@@ -160,7 +160,7 @@ $rspec spec/user_spec.rb -f d -c
 > You should be able to see the test running successfully.
 
 
-### Step:2 - Let's automate with guard.
+### Step:6 - Let's automate with guard.
 
 Install the guard gem if you haven't installed yet. Try ***guard -v*** to test it.
 
@@ -168,10 +168,12 @@ Install the guard gem if you haven't installed yet. Try ***guard -v*** to test i
 $gem install guard
 ```
 ```ruby
-guard init # This is will create Guardfile
+$guard init # This is will create Guardfile.
 ```
 
-### Step:5 - Run the guard
+You may not need all the contents so copy Guardfile from - https://github.com/mohanraj-nagasamy/rspec-test.git
+
+### Step:7 - Run the guard
 
 ```ruby
 $guard -i -n f -c
@@ -179,23 +181,23 @@ $guard -i -n f -c
 
 It will watch for the file changes and runs the test for you. You don't have to run the tests every time when you change the files (including tests and the file you are testing).
 
-### Step:6 - Open the code in some editor
+### Step:8 - Open the code in some editor
 
 ```ruby
-$subl .
+$subl . #Sublime in my case
 ```
 
 Stay focus on the editor and keep writing tests.
 
-### Step:7 - Have fun
+### Step:9 - Have fun
 
 > Remember:<br/>
-> lib - is where your source goes. <br/>
-> spec - is where your tests goes (RSpec files)
-> And the movie memento - TDD is kind of that exp.
+> **lib** - is where your source goes. <br/>
+> **spec** - is where your tests goes (RSpec files).  <br/>
+> And the movie **memento** - TDD is kind of that exp. 
 
 
 # Links
-[http://stackoverflow.com/questions/201385/getting-started-with-rspec-looking-for-tutorials]
+http://stackoverflow.com/questions/201385/getting-started-with-rspec-looking-for-tutorials
 
-[https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/include-matcher]
+https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/include-matcher
