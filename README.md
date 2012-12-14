@@ -1,10 +1,63 @@
-Rspec with guard without rails dependency
+# Rspec with guard without rails dependency
 
-one liner
-Rspec - 
-guard - 
+> one liner
+> Rspec - 
+> guard - 
 
-Steps
+
+## Simple way
+
+### Step:1 - Clone the project 
+
+
+'''git clone git://github.com/mohanraj-nagasamy/rspec-test.git'''
+
+
+### Step:2 - Run the following commands
+
+
+'''
+$cd rspec-test
+$ls -l
+'''
+lib - is where your source goes.
+spec - is where your tests goes (RSpec files)
+
+
+### Step:3 - Install rspec
+
+Now install the rspec gem if you haven't installed yet. Try *rspec -v* to test it.
+
+$gem install rspec
+
+### Step:4 - Install guard
+
+Now install the guard gem if you haven't installed yet. Try *guard -v* to test it.
+
+$gem install guard
+
+
+### Step:5 - Run the guard
+
+$guard -i -n f -c
+
+### Step:6 - Open the code in some editor
+
+$subl .
+
+Stay focus on the edior and keep writing tests.
+
+### Step:7 - Have fun
+
+## Remember
+lib - is where your source goes.
+spec - is where your tests goes (RSpec files)
+
+
+## Manual way
+
+> Some people like want to do it by manuall on their own. So here are the steps.
+> But you have to modify the following files or copy from 
 
 step 1
 mkdir rspec-test/{lib,spec}
