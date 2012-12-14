@@ -1,12 +1,12 @@
 # Rspec with guard without rails dependency
 
 > ## one liner about rspec and guard
-> Rspec - RSpec is testing tool for the Ruby programming language. Born under the banner of Behaviour-Driven Development, it is designed to make Test-Driven Development a productive and enjoyable experience. More at : http://rspec.info/
+> Rspec - RSpec is testing tool for the Ruby programming language. It is designed to make Test-Driven Development a productive and enjoyable experience. More @ http://rspec.info/
 
-> Guard - Guard is a command line tool to easily handle events on file system modifications. So you don't have to run the test every time you change the tests. Guard keeps you focus on the tests and text editor or IDE.
+> Guard - Guard is a command line tool to easily handle events on file system modifications. So you don't have to run the test every time you change the tests. Guard keeps you focus on the tests and text editor or IDE. More @ https://github.com/guard/guard/blob/master/README.md
 
 
-## The Simple way
+## The simple way
 
 ### Step:1 - Clone the project 
 
@@ -28,74 +28,85 @@ $ls -l
 
 ### Step:3 - Install rspec
 
-Now install the rspec gem if you haven't installed yet. Try *rspec -v* to test it.
+Now install the rspec gem if you haven't installed yet. Try ***rspec -v*** to test it.
 
+```ruby
 $gem install rspec
+```
 
 ### Step:4 - Install guard
 
-Now install the guard gem if you haven't installed yet. Try *guard -v* to test it.
+Now install the guard gem if you haven't installed yet. Try ***guard -v*** to test it.
 
+```ruby
 $gem install guard
-
+```
 
 ### Step:5 - Run the guard
 
+```ruby
 $guard -i -n f -c
+```
+
+It will watch for the file changes and runs the test for you. You don't have to run the tests every time when you change the file.
 
 ### Step:6 - Open the code in some editor
 
+```ruby
 $subl .
+```
 
-Stay focus on the edior and keep writing tests.
+Stay focus on the editor and keep writing tests.
 
 ### Step:7 - Have fun
 
-## Remember
-lib - is where your source goes.
-spec - is where your tests goes (RSpec files)
+> Remember:<br/>
+> lib - is where your source goes. <br/>
+> spec - is where your tests goes (RSpec files)
+> And the movie memento - TDD is kind of that exp. 
 
 
-## Manual way
+## The manual way
 
-> Some people like want to do it by manuall on their own. So here are the steps.
+> Some people want to do it by manually on their own. So here are the steps.
 > But you have to modify the following files or copy from 
 
-step 1
+### Step:1 - create dirs
+
+```ruby
 mkdir rspec-test/{lib,spec}
 cd rspec-test
+```
 
-it will look like-
+The folder structure will look like-
+
+```ruby
 rspec-test
 	-lib
 	-spec
+```
 
-lib - is where your source goes.
-spec - is where your tests goes (RSpec files)
+> lib - is where your source goes. <br/>
+> spec - is where your tests goes (RSpec files)
 
-step 2
+### Step:2 - Install rspec gem
 now install the rspec gem if you haven't installed yet. Try *rspec -v* to test it.
 
+```ruby
 gem install rspec
-
-step XXX
 rspec --init
+```
 
-will create Guardfile.
+It will create .rspec file and spec_helper.rb.
 
-step 3
+### Step:2 - Create test first
 
-create user.rb inside lib dir
-subl lib/user.rb 
+Let's say you want to test User spec. Create user_spec.rb inside spec dir 
 
-user.rb
-class User
-	attr_accessor :name
-end
+```ruby
+subl spec/user_spec.rb 
 
-create user_spec.rb inside spec dir 
-subl lib/user_spec.rb 
-
+#spec/user_spec.rb 
 require 'user'
 
 describe User do
@@ -105,29 +116,66 @@ describe User do
 		user.name.should be == "test-1"
 	end
 end
+```
 
-step 4
-run tests with -
+### Step:2 - Create something to pass the test
 
+create user.rb inside lib dir
+
+```ruby
+subl lib/user.rb 
+
+#lib/user.rb 
+user.rb
+class User
+	attr_accessor :name
+end
+```
+
+### Step:2 - Run tests with rspec
+
+```ruby
 rspec spec/user_spec.rb -f d -c
+```
 
-You should be able to see the test running successfully.
+> You should be able to see the test running successfully.
 
-Let's automate with guard.
-step 5
-now install the guard gem if you haven't installed yet. Try *guard -v* to test it.
 
+### Step:2 - Let's automate with guard.
+
+Install the guard gem if you haven't installed yet. Try ***guard -v*** to test it.
+
+```ruby
 gem install guard
+```
+```ruby
+guard init # This is will create Guardfile
+```
 
-step 6
-guard init
+### Step:5 - Run the guard
 
-this is will create Guardfile
+```ruby
+$guard -i -n f -c
+```
 
-guard -i -n f -c
+It will watch for the file changes and runs the test for you. You don't have to run the tests every time when you change the file.
 
+### Step:6 - Open the code in some editor
+
+```ruby
+$subl .
+```
+
+Stay focus on the editor and keep writing tests.
+
+### Step:7 - Have fun
+
+> Remember:<br/>
+> lib - is where your source goes. <br/>
+> spec - is where your tests goes (RSpec files)
+> And the movie memento - TDD is kind of that exp.
 
 
 Links
-http://stackoverflow.com/questions/201385/getting-started-with-rspec-looking-for-tutorials
+http://stackoverflow.com/questions/201385/getting-started-with-rspec-looking-for-tutorials <br/>
 https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/include-matcher
