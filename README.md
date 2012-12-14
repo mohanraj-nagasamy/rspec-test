@@ -7,6 +7,11 @@
 > Guard - Guard is a command line tool to easily handle events on file system modifications. So you don't have to run the test every time you change the files. Guard keeps you focus on the tests and text editor or IDE. <br/>
 > More @ https://github.com/guard/guard/blob/master/README.md
 
+## Table of Contents
+
+* [The simple way](#the-simple-way)
+* [The manual way](#the-manual-way)
+
 
 ## The simple way
 
@@ -71,8 +76,12 @@ Stay focus on the editor and keep writing tests.
 ## The manual way
 
 > Some people want to do it by manually on their own. So here are the steps.  <br/>
-> But you have to modify the following files or copy from - https://github.com/mohanraj-nagasamy/rspec-test.git
+> But you may have to modify the following files or copy from - https://github.com/mohanraj-nagasamy/rspec-test.git
 
+```ruby
+.rspec
+Guardfile
+```
 
 ### Step:1 - create dirs
 
@@ -188,4 +197,5 @@ Stay focus on the editor and keep writing tests.
 
 # Links
 [http://stackoverflow.com/questions/201385/getting-started-with-rspec-looking-for-tutorials]
+
 [https://www.relishapp.com/rspec/rspec-expectations/v/2-0/docs/matchers/include-matcher]
